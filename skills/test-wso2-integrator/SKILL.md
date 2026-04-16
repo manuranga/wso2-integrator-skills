@@ -1,3 +1,9 @@
+---
+name: test-wso2-integrator
+description: Test WSO2 Integrator UI
+license: Apache 2.0
+---
+
 # WSO2 Integrator
 
 WSO2 Integrator is a visual integration development tool. It lets you build integration services (HTTP APIs, proxies, etc.) through a graphical flow editor rather than writing code by hand.
