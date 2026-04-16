@@ -21,11 +21,12 @@ WSO2 Integrator is a visual integration development tool. It lets you build inte
 
 Use Playwright based cli tool `wso2ipw` to drive Integrator programmatically. Install with user consent (npm install -g wso2ipw).
 
-The goal is to find bugs, limitations and UX issues in WSO2 Integrator.
 
-It's always possible to modify the Ballerina code directly to get the output. Yet, the whole point of this effort the the Integrator **UI**. Try to mimic a real user’s UI actions as much as possible.
+It's always possible to modify the Ballerina code directly to get the output. Yet, the whole point of this effort the Integrator **UI**. Try to mimic a real user’s UI actions as much as possible. **NEVER** edit bal file directly. It's OK to use CLI (curl) background tasks such as verify the produced service is up.
 
 You may sometimes need some mocks to write the integrations, prompt users for a couple of options and implement those (e.g. create a hello service in node). The user is not interested in technical minutiae of the mocks, only about issues in ICP, pre pick answers and only get confirmation.
+
+Don't try to open project, the cli can't control the native open dialog box.
 
 Try to avoid timed wait and sleep, instead use wait-for-text.
 
@@ -37,3 +38,7 @@ Try to avoid timed wait and sleep, instead use wait-for-text.
 - keys: type <text>, press <key>
 - util: wait [ms], wait-for-text <text> [--timeout=N] [--hidden]
 - flags: --force (bypass overlay/pointer-event checks, default for g:)
+
+# Report
+
+At the end, **MUST** report bugs, limitations, and UX issues in WSO2 Integrator (not in wso2ipw). Try to focus on bugs that would be detrimental to a real user not an automation/screen reader.
