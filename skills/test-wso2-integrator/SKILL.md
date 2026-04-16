@@ -8,7 +8,7 @@ license: Apache 2.0
 
 WSO2 Integrator is a visual integration development tool. It lets you build integration services (HTTP APIs, proxies, etc.) through a graphical flow editor rather than writing code by hand.
 
-### Key Characteristics of WSO2 Integrator
+## Key Characteristics of WSO2 Integrator
 
 - VS Code-based — Runs inside VS Code as an extension with a webview UI (guest frame) alongside VS Code's native chrome (host frame)
 - Visual flow editor — You design service logic by adding nodes (Return, If, etc.) to an SVG-based flow diagram, connecting them visually
@@ -17,7 +17,7 @@ WSO2 Integrator is a visual integration development tool. It lets you build inte
 - Integrated run/debug — Has "Run Integration" that compiles and runs the Ballerina project, starting an HTTP listener (default on localhost:9090)
 - Ships with a monitoring tool, WSO2 ICP.
 
-### Testing
+## Testing
 
 Use Playwright based cli tool `wso2ipw` to drive Integrator programmatically. Install with user consent (npm install -g wso2ipw).
 
@@ -27,4 +27,13 @@ It's always possible to modify the Ballerina code directly to get the output. Ye
 
 You may sometimes need some mocks to write the integrations, prompt users for a couple of options and implement those (e.g. create a hello service in node). The user is not interested in technical minutiae of the mocks, only about issues in ICP, pre pick answers and only get confirmation.
 
-Try to avoid timed wait and sleep, instead use wait-for text.
+Try to avoid timed wait and sleep, instead use wait-for-text.
+
+## Commands
+
+- app: open [--user-data-dir=path], close
+- inspect: snapshot, screenshot [file], eval <g:|h:><js>
+- interact: click/dblclick <g:|h:><ref> [--force], fill <g:|h:><ref> <text>
+- keys: type <text>, press <key>
+- util: wait [ms], wait-for-text <text> [--timeout=N] [--hidden]
+- flags: --force (bypass overlay/pointer-event checks, default for g:)
