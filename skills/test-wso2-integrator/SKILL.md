@@ -29,13 +29,13 @@ You may sometimes need some mocks to write the integrations, prompt users for a 
 
 Don't try to open project, the cli can't control the native open dialog box.
 
-Try to avoid timed wait and sleep, instead use wait-for-text.
+Try to avoid timed wait and sleep, instead use wait-for-text. Try to avoid conditional flows (except in final testing)
 
 ## Commands
 
 - app: open [--user-data-dir=path], close
 - inspect: snapshot, screenshot [file], eval <g:|h:><js>
-- interact: click/dblclick <g:|h:><ref> [--force], fill <g:|h:><ref> <text> (fill will auto detect input type (plain, cm) and act)
+- interact: click/dblclick <g:|h:><ref> [--force], fill <g:|h:><ref> <text> (fill will auto detect input type (plain, cm) and act. Use fill over type for input boxes)
 - keys: type <text>, press <key>
 - util: wait [ms], wait-for-text <text> [--timeout=N] [--hidden]
 - flags: --force (bypass overlay/pointer-event checks, default for g:)
