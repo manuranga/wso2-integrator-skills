@@ -21,6 +21,7 @@ WSO2 Integrator is a visual integration development tool. It lets you build inte
 
 Use Playwright based cli tool `wso2ipw` to drive Integrator programmatically. Install with user consent (npm install -g wso2ipw).
 
+Break the task into chunks, for each chunk create a sh, run and test, repeat until success, move to next chunk. See examples dir.
 
 It's always possible to modify the Ballerina code directly to get the output. Yet, the whole point of this effort the Integrator **UI**. Try to mimic a real user’s UI actions as much as possible. **NEVER** edit bal file directly. It's OK to use CLI (curl) background tasks such as verify the produced service is up.
 
@@ -34,7 +35,7 @@ Try to avoid timed wait and sleep, instead use wait-for-text.
 
 - app: open [--user-data-dir=path], close
 - inspect: snapshot, screenshot [file], eval <g:|h:><js>
-- interact: click/dblclick <g:|h:><ref> [--force], fill <g:|h:><ref> <text>
+- interact: click/dblclick <g:|h:><ref> [--force], fill <g:|h:><ref> <text> (fill will auto detect input type (plain, cm) and act)
 - keys: type <text>, press <key>
 - util: wait [ms], wait-for-text <text> [--timeout=N] [--hidden]
 - flags: --force (bypass overlay/pointer-event checks, default for g:)
